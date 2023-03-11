@@ -1,0 +1,19 @@
+
+.compass{
+    position: relative;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 5px;
+}
+.compass > .arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -0px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 15px 10px 0 10px;
+    border-color: red transparent transparent transparent;
+    z-index: 1;
+}

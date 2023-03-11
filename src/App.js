@@ -47,26 +47,24 @@ function App() {
 
   return (
       <div className="flex content-center py-5  text-white  justify-center h-screen oveflow-auto ">
-          <div className="container h-auto xl:px-36">
+          <div className="container h-auto px-3 xl:px-36">
               <Header city={city} changeCity={value=> setCity(value)}/>
               <Base city={city} weather={weather} todayWeather={todayWeather}/>
               <div className="grid grid-cols-6 gap-2 ">
-                    <div className="col-span-4" >
+                    <div className="col-span-6 md:col-span-5 lg:col-span-4" >
                         <div className="flex flex-col">
                             <Hourly weather={weather} todayWeather={todayWeather} />
                         </div>
                         <div className="grid grid-cols-4 gap-2 mt-2">
-                            <div className="col-span-2" >
+                            <div className="col-span-4 sm:col-span-2" >
                                 <Weekly weather={weather}/>
                             </div>
-                            <div className="col-span-2">
+                            <div className=" col-span-4 sm:col-span-2">
                                 <div className="grid grid-cols-2 gap-2">
                                     <div className="col-span-1">
                                         <div className=" flex flex-col">
                                             <div className="card">
                                                 <UVIndex weather={weather} todayWeather={todayWeather}/>
-
-
                                             </div>
 
                                         </div>
@@ -93,14 +91,14 @@ function App() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-2" >
+                    <div className="col-span-6 md:col-span-1 lg:col-span-2" >
                         <div className="flex flex-col">
                             <div className="card">
 
                             </div>
                         </div>
                         <div className="grid grid-cols-2 gap-2 mt-2">
-                            <div className="col-span-1">
+                            <div className="col-span-2 lg:col-span-1">
                                 <div className=" flex flex-col">
                                         <div className="card">
                                             <Moon weather={weather} todayWeather={todayWeather}/>
